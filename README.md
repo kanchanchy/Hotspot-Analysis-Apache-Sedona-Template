@@ -125,12 +125,6 @@ In the code template,
 3. The output DataFrame should be sorted by you according to G-score. The coding template will take the first 50 to output. DO NOT OUTPUT G-score.
 
 
-## Submission
-### Submission files
-1. Submit your project jar package.
-2. Zip your project source code and submit to Blackboard.
-3. Note that: you need to make sure your code can compile and package by entering ```sbt clean assembly```. We will run the compiled package on our cluster directly using "spark-submit" with parameters. If your code cannot compile and package, you will not receive any points.
-
 ## Tips (Optional)
 This section is same with that in Phase 1.
 ### How to debug your code in IDE
