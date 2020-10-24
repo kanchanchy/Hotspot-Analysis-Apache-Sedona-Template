@@ -83,9 +83,9 @@ All zones with their count, sorted by "rectangle" string in an ascending order.
 The coordinates of top 50 hotest cells sorted by their G score in a descending order. Note, DO NOT OUTPUT G score.
 
 ```
--7399,4075,15
--7399,4075,29
--7399,4075,22
+-7399,4075
+-7399,4075
+-7399,4075
 ```
 ### Example answers
 An example input and answer are put in "testcase" folder of the coding template. 
@@ -103,8 +103,9 @@ DO NOT DELETE any existing code in the coding template unless you see this "YOU 
 In the code template,
 
 1. You need to change "**HotzoneAnalysis.scala** and **HotzoneUtils.scala**".
-2. The coding template has loaded the data and wrote the first step, range join query, for you. Please finish the rest of the task.
-3. The output DataFrame should be sorted by you according to "rectangle" string.
+2. Replace the logic of User Defined Function ST\_Contains in HotzoneUtils.scala. You can add additional methods in this class if you need.
+3. The coding template has loaded the data and wrote the first step, range join query, for you. Please finish the rest of the task.
+4. The output DataFrame should be sorted by you according to "rectangle" string.
 
 ### Hot cell analysis
 In the code template,
@@ -127,16 +128,15 @@ This section is same with that in Phase 1.
 If you are using the Scala template
 
 1. Use IntelliJ Idea with Scala plug-in or any other Scala IDE.
-2. Replace the logic of User Defined Functions ST\_Contains and ST\_Within in SpatialQuery.scala.
-3. Append ```.master("local[*]")``` after ```.config("spark.some.config.option", "some-value")``` to tell IDE the master IP is localhost.
+2. Append ```.master("local[*]")``` after ```..config("spark.serializer",classOf[KryoSerializer].getName)``` to tell IDE the master IP is localhost.
 3. In some cases, you may need to go to "build.sbt" file and change ```% "provided"``` to ```% "compile"``` in order to debug your code in IDE
 4. Run your code in IDE
-5. **You must revert Step 3 and 4 above and recompile your code before use spark-submit!!!**
+5. **You must revert Step 2 and 3 above and recompile your code before use spark-submit!!!**
 
 ### How to submit your code to Spark
 If you are using the Scala template
 
 1. Go to project root folder
 2. Run ```sbt clean assembly```. You may need to install sbt in order to run this command.
-3. Find the packaged jar in "./target/scala-2.11/CSE512-Project-Hotspot-Analysis-Template-assembly-0.1.0.jar"
-4. Submit the jar to Spark using Spark command "./bin/spark-submit". A pseudo code example: ```./bin/spark-submit ~/GitHub/CSE512-Project-Hotspot-Analysis-Template/target/scala-2.11/CSE512-Project-Hotspot-Analysis-Template-assembly-0.1.0.jar test/output hotzoneanalysis src/resources/point-hotzone.csv src/resources/zone-hotzone.csv hotcellanalysis src/resources/yellow_tripdata_2009-01_point.csv```
+3. Find the packaged jar in "./target/scala-2.11/Apache-Sedona-Hotspot-Analysis-assembly-0.1.0.jar"
+4. Submit the jar to Spark using Spark command "./bin/spark-submit". A pseudo code example: ```./bin/spark-submit ~/GitHub/Hotspot-Analysis-Apache-Sedona-Template/target/scala-2.11/Apache-Sedona-Hotspot-Analysis-assembly-0.1.0.jar test/output hotzoneanalysis src/resources/point-hotzone.csv src/resources/zone-hotzone.csv hotcellanalysis src/resources/yellow_tripdata_2009-01_point.csv```
