@@ -1,4 +1,4 @@
-# CSE512-Project-Hotspot-Analysis-Template
+# Hotspot Analysis on Apache Sedona Template Project
 #### Version history
 v1.1, Nov 16, Fix a bug in "Entrace.scala"
 v1.0, Nov 13, Initial version
@@ -6,7 +6,7 @@ v1.0, Nov 13, Initial version
 
 ## Requirement
 
-In this phase, you are required to do spatial hot spot analysis. In particular, you need to complete two different hot spot analysis tasks 
+In this project, you are required to do spatial hotspot analysis. In particular, you need to complete two different hotspot analysis tasks 
 
 
 ### Hot zone analysis
