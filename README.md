@@ -33,6 +33,16 @@ To reduce the computation power need，we made the following changes:
 5. We don't use Jaccard similarity to check your answer.
 However, you don't need to worry about how to decide the cell coordinates because the code template generated cell coordinates. You just need to write the rest of the task.
 
+## User Defined Function
+
+### ST_Contains
+
+Input: queryRectangle:String, pointString:String
+
+Output: Boolean (true or false)
+
+Definition: You first need to parse the queryRectangle (e.g., "-155.940114,19.081331,-155.618917,19.5307") and pointString (e.g., "-88.331492,32.324142") to a format that you are comfortable with. Then check whether the queryRectangle fully contains the point. Consider on-boundary point. If the point is within the rectangle then return true otherwise return false.
+
 ## Coding template specification
 
 ### Input parameters
