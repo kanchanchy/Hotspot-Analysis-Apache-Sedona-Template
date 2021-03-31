@@ -93,9 +93,9 @@ All zones with their count, sorted by "rectangle" string in an ascending order.
 The coordinates of top 50 hotest cells sorted by their G score in a descending order. Note, DO NOT OUTPUT G score.
 
 ```
--7399,4075
--7399,4075
--7399,4075
+-7399,4075,15
+-7399,4075,22
+-7399,4075,14
 ```
 ### Example answers
 An example input and answer are put in "testcase" folder of the coding template. 
